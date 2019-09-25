@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style>
+        #btnzoomin, #btnzoomout,#btnanimate{
+            padding: 20px;
+            border: 1px dotted black;
+            margin:10px;
+            position: relative;
+        }
+        img{
+            min-width: 50px;
+            min-height: 50px;
+            max-width: 1000px;
+            max-height: 1000px;
+        }
+        </style>
+    </head>
+    <body>
+        <button id="btnzoomin">Zoom In</button>
+        <button id="btnzoomout">Zoom Out</button>
+        <button id="btnanimate">Animate</button>
+        <p>
+        <img src="https://image.shutterstock.com/z/stock-photo-bright-spring-view-of-the-cameo-island-picturesque-morning-scene-on-the-port-sostis-zakinthos-1048185397.jpg" height="200px" width="200px" /> 
+        </p>
+        <script type="text/javascript">
+
+        $("#btnzoomin").click(function () {
+            $("img").animate({
+               
+                width: "+=40px",
+                height: "+=30px"
+            });
+        });
+        $("#btnanimate").click(function () {
+            $("img").animate({
+                marginLeft:200,
+            });
+        });
+        $("#btnzoomout").click(function () {
+            $("img").animate({
+                
+                width: "-=40px",
+                height: "-=30px"
+            });
+        });
+        </script> 
+    </body>
+</html>
